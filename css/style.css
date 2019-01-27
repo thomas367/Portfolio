@@ -1,12 +1,6 @@
-/*******************************************
-                VARIABLES
-*******************************************/
-/*******************************************
-                MIXINS
-*******************************************/
-/*******************************************
-                LAYOUT
-*******************************************/
+/********       PORTFOLIO       ********/
+/********       MIXIN       ********/
+/********       LAYOUT      ********/
 html, body {
   color: #383838;
   font-family: 'Lato', Arial;
@@ -37,16 +31,6 @@ h1 {
       font-weight: 400;
       font-size: 350%;
       white-space: nowrap; } }
-  h1:after {
-    content: ".";
-    color: #3498db;
-    font-size: 200%;
-    margin-left: -5px;
-    line-height: 0; }
-    @media (min-width: 768px) {
-      h1:after {
-        font-size: 150%;
-        margin-left: 2px; } }
 
 h2 {
   font-size: 200%;
@@ -102,16 +86,11 @@ button {
   border: none;
   outline: 0; }
 
-input:focus {
-  outline: 0; }
-
 @media (min-width: 768px) {
   .contact, .portfolio, .about-me, .skills {
     padding: 3rem 0; } }
 
-/*******************************************
-               REUSABLE
-*******************************************/
+/********       REUSABLE       ********/
 .color-main {
   color: #3498db !important; }
 
@@ -142,9 +121,7 @@ input:focus {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-/*******************************************
-                HEADER
-*******************************************/
+/********       HEADER      ********/
 .main-header {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../img/header_logo.jpeg) center center;
   background-size: cover;
@@ -240,18 +217,62 @@ input:focus {
         .main-header .welcome-box p {
           font-size: 150%; } }
 
-/*******************************************
-                PORTFOLIO
-*******************************************/
-/*******************************************
-                ABOUT ME
-*******************************************/
-/*******************************************
-                SKILLS
-*******************************************/
-/*******************************************
-                CONTACT ME
-*******************************************/
+/********       PORTFOLIO       ********/
+.portfolio .projects {
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+@media (min-width: 1200px) {
+  .portfolio {
+    transition: height 0.5s ease-out; } }
+.portfolio .project {
+  color: white;
+  font-size: 90%;
+  padding: 0.9rem 1rem;
+  position: relative; }
+  @media (min-width: 900px) {
+    .portfolio .project {
+      font-size: 100%; } }
+  .portfolio .project a:link, .portfolio .project a:active, .portfolio .project a:hover, .portfolio .project a:visited {
+    color: white;
+    text-decoration: none; }
+  .portfolio .project .project-img {
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); }
+  .portfolio .project .description {
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0;
+    padding: 1rem;
+    position: absolute;
+    transition: all 0.25s;
+    top: 0.9rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.9rem; }
+  .portfolio .project .button {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%; }
+    @media (min-width: 768px) {
+      .portfolio .project .button {
+        bottom: 1rem; } }
+  .portfolio .project .preview-btn {
+    left: 15%; }
+    @media (min-width: 768px) {
+      .portfolio .project .preview-btn {
+        left: 25%; } }
+  .portfolio .project .github-btn {
+    left: 85%; }
+    @media (min-width: 768px) {
+      .portfolio .project .github-btn {
+        left: 75%; } }
+  .portfolio .project .project:hover .description {
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 1; }
+
+/********       ABOUT ME       ********/
+/********       SKILLS       ********/
+/********       CONTACT ME       ********/
 .contact-row {
   margin-top: 2rem; }
 
@@ -289,9 +310,7 @@ input:focus {
         background-color: #3498db;
         border-color: #3498db; }
 
-/*******************************************
-                FOOTER
-*******************************************/
+/********       FOOTER       ********/
 .footer-main {
   color: #959595;
   font-size: 85%;

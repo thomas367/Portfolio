@@ -1,9 +1,6 @@
 
-/*******************************************
-                VARIABLES
-*******************************************/
+/********       PORTFOLIO       ********/
 
-//colors - site
 $colorMain: #3498db;
 $colorMainDark: #2980ba;
 $colorLightGray: #fcfcfc;
@@ -12,18 +9,13 @@ $colorBlack: #383838;
 $colorLightBlack: #202325;
 $colorDarkBlack: #191B1D;
 
-//colors - media
-$colorGithub: #333;
 $colorLinkedin: #007bb5;
 $colorGithub: #333333;
 
-/*******************************************
-                MIXINS
-*******************************************/
+/********       MIXIN       ********/
 
-//media query mixins
 $tablet-width: 768px;
-$desktop-width: 992px;
+$desktop-width: 900px;
 $large-desktop-width: 1200px;
 
 @mixin mq-tablet {
@@ -44,7 +36,6 @@ $large-desktop-width: 1200px;
   }
 }
 
-//positional mixins
 @mixin absolute-center($top:auto, $left:auto) {
     position:absolute;
     top:$top;
@@ -53,28 +44,14 @@ $large-desktop-width: 1200px;
     transform:translate(-50%, -50%);
 }
 
-//layout mixins
-@mixin afterDot($size: 200%, $leftMargin: 0) {
-    content: ".";
-    color: $colorMain;
-    font-size: $size;
-    margin-left: $leftMargin;
-    line-height: 0;
-
-    @include mq-tablet { font-size: $size - 50; margin-left: $leftMargin + 7; }
-}
-
-//placeholders
 %featBG {
     background-size: cover;
     background-position: center;
     transition: all 1s;
 }
 
-/*******************************************
-                LAYOUT
-*******************************************/
-//generic
+/********       LAYOUT      ********/
+
 html, body {
     color: $colorBlack;
     font-family: 'Lato', Arial;
@@ -92,7 +69,7 @@ html, body {
     color: white;
 }
 
-//headers (h1-h6)
+
 h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
@@ -110,7 +87,6 @@ h1 {
         white-space: nowrap;
     }
 
-    &:after { @include afterDot(200%, -5px); }
 }
 
 h2 {
@@ -162,12 +138,12 @@ h4 {
     }
 }
 
-//links
+
 a:link, a:active, a:hover, a:visited, a:focus {
     outline: 0;
 }
 
-//paragraphs
+
 p {
     line-height: 1.75rem;
     font-weight: 300;
@@ -177,14 +153,10 @@ p {
     }
 }
 
-//input
+
 button {
     background: none;
     border: none;
-    outline: 0;
-}
-
-input:focus {
     outline: 0;
 }
 
@@ -194,16 +166,12 @@ input:focus {
     }
 }
 
-/*******************************************
-               REUSABLE
-*******************************************/
+/********       REUSABLE       ********/
 
-//components
 .color-main {
     color: $colorMain !important;
 }
 
-//buttons
 .button {
     background-color: $colorMain;
     font-size: 120%;
@@ -220,7 +188,6 @@ input:focus {
     }
 }
 
-//facilities
 .stop-scrolling {
     @media only screen and (max-width: $tablet-width) {
         height: 100%;
@@ -228,20 +195,16 @@ input:focus {
     }
 }
 
-//containers
 .dark-container {
     background-color: $colorDarkBlack;
     color: white;
 }
 
-//alignments
 .absolute-center {
     @include absolute-center(50%, 50%);
 }
 
-/*******************************************
-                HEADER
-*******************************************/
+/********       HEADER      ********/
 .main-header {
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.35)), url(../img/header_logo.jpeg) center center;
     background-size: cover;
@@ -324,7 +287,6 @@ input:focus {
             @include mq-tablet { display: none; }
         }
 
-        //Bootstrap overrides for mobile nav (extended)
         ul {
             margin-bottom: 0;
             margin-top: 0;
@@ -362,32 +324,99 @@ input:focus {
     }
 }
 
-/*******************************************
-                PORTFOLIO
-*******************************************/
+/********       PORTFOLIO       ********/
 
 .portfolio {
-    
+
+    .projects{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    @include mq-large-desktop {
+        transition: height 0.5s ease-out;
+    }
+
+    .project{
+        color: white;
+        font-size: 90%;
+        padding: 0.9rem 1rem;
+        position: relative;
+
+        @include mq-desktop {
+            font-size: 100%;
+        }
+
+        a:link, a:active, a:hover, a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        .project-img{
+            cursor: pointer;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        }
+
+        .description {     
+            background-color: transparent;
+            cursor: pointer;
+            opacity: 0;
+            padding: 1rem;
+            position: absolute;
+            transition: all 0.25s;
+            top: 0.9rem;
+            left: 1rem;
+            right: 1rem;
+            bottom: 0.9rem;
+        }
+
+        .button{
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+           
+            @include mq-tablet {
+                bottom: 1rem;
+            }
+        }
+
+        .preview-btn{
+            left: 15%;
+
+            @include mq-tablet{
+                left:25%;
+            }
+            
+        }
+
+        .github-btn{
+            left: 85%;
+
+            @include mq-tablet{
+                left: 75%;
+            }
+
+        }
+
+        .project:hover .description {
+            background-color: rgba(0, 0, 0, 0.75);
+            opacity: 1;
+        }
+    }
 }
 
-/*******************************************
-                ABOUT ME
-*******************************************/
+/********       ABOUT ME       ********/
 .about-me {
 
     
 }
 
-/*******************************************
-                SKILLS
-*******************************************/
+/********       SKILLS       ********/
 .skills {
     
 }
 
-/*******************************************
-                CONTACT ME
-*******************************************/
+/********       CONTACT ME       ********/
 .contact-row {
     margin-top: 2rem;
 }
@@ -449,9 +478,7 @@ input:focus {
 	}
 }
 
-/*******************************************
-                FOOTER
-*******************************************/
+/********       FOOTER       ********/
 .footer-main {
     color: $colorFooter;
     font-size: 85%;
@@ -463,4 +490,3 @@ input:focus {
         padding: .25rem 0 2rem 0;
     }
 }
-

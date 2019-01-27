@@ -1,5 +1,6 @@
 $(document).ready(function () {	
-	
+
+
 	$(function(){
 		new TypeIt('.welcome-box p',{
 			speed:70,
@@ -7,8 +8,10 @@ $(document).ready(function () {
 		});	
 		
 	});
-	
-	$('.welcome-box h1').animate({opacity: 1}, 2000, function() {	
+
+	$('.welcome-box h1').delay(2800).animate({
+		opacity: 1
+		}, 2000, function() {	
 	});
 	
 	
