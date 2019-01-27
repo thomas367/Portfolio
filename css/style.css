@@ -264,6 +264,12 @@ input:focus {
       display: inline-block;
       font-size: 150%;
       margin: 0 0.5rem; }
+      .contact .social li span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
       .contact .social li .social-btn, .contact .social li .social-linkedin, .contact .social li .social-github, .contact .social li .social-email, .contact .social li .social-btn:focus, .contact .social li .social-linkedin:focus, .contact .social li .social-github:focus, .contact .social li .social-email:focus {
         background-color: transparent;
         color: white;

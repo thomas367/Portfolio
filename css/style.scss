@@ -396,6 +396,7 @@ input:focus {
     text-align: center;
 
     .social {
+
 		width: 100%;
 		z-index: 3;
 
@@ -403,6 +404,10 @@ input:focus {
 			display: inline-block;
 			font-size: 150%;
 			margin: 0 0.5rem;
+
+            span {
+                @include absolute-center(50%, 50%);
+            }
 
 			.social-btn, .social-btn:focus {
 				background-color: transparent;
