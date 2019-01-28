@@ -1,5 +1,5 @@
 
-/********       PORTFOLIO       ********/
+/********       VARIABLES       ********/
 
 $colorMain: #3498db;
 $colorMainDark: #2980ba;
@@ -12,10 +12,10 @@ $colorDarkBlack: #191B1D;
 $colorLinkedin: #007bb5;
 $colorGithub: #333333;
 
-/********       MIXIN       ********/
+/********       MIXINS       ********/
 
 $tablet-width: 768px;
-$desktop-width: 900px;
+$desktop-width: 992px;
 $large-desktop-width: 1200px;
 
 @mixin mq-tablet {
@@ -44,19 +44,17 @@ $large-desktop-width: 1200px;
     transform:translate(-50%, -50%);
 }
 
-%featBG {
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
 /********       LAYOUT      ********/
 
 html, body {
     color: $colorBlack;
     font-family: 'Lato', Arial;
     font-size: 14px;
-    @include mq-tablet { font-size: 16px; }
+    
+    @include mq-tablet { 
+        font-size: 16px; 
+    }
+    
     text-rendering: optimizeLegibility;
 }
 
@@ -206,7 +204,7 @@ button {
 
 /********       HEADER      ********/
 .main-header {
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.35)), url(../img/header_logo.jpeg) center center;
+    background:  url(../img/header_logo.jpeg);
     background-size: cover;
     box-shadow: inset 0 0.5rem 5rem rgba(0, 0, 0, 0.75);
     height: 100vh;
@@ -381,19 +379,19 @@ button {
         }
 
         .preview-btn{
-            left: 15%;
+            left: 10%;
 
-            @include mq-tablet{
-                left:25%;
+            @include mq-tablet {
+                left:15%;
             }
             
         }
 
         .github-btn{
-            left: 85%;
+            left: 65%;
 
-            @include mq-tablet{
-                left: 75%;
+            @include mq-tablet {
+                left: 65%;
             }
 
         }
