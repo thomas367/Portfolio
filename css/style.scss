@@ -411,7 +411,23 @@ button {
 
 /********       SKILLS       ********/
 .skills {
-    
+
+    #myCanvasContainer{
+        position: relative;
+        margin: 0 10% !important;
+        display: block;
+        clear: both;
+        width: 80%;
+        height: auto;
+        @include absolute-center(50%, 50%);
+    }
+
+    #myCanvas{
+        position: relative;
+        width: 100%;
+        margin: 0;  
+        @include absolute-center(50%, 50%);  
+    }
 }
 
 /********       CONTACT ME       ********/
