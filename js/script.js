@@ -21,6 +21,7 @@ $(document).ready(function () {
           reverse: true,
           shape:'sphere',
           depth: 0.4,
+		  noSelect: true,
           maxSpeed: 0.07,
           minSpeed: 0.05,
           initial: [0.06, 0.06],

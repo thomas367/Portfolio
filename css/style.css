@@ -266,12 +266,48 @@ button {
     @media (min-width: 768px) {
       .portfolio .project .github-btn {
         left: 65%; } }
-  .portfolio .project .project:hover .description {
+  .portfolio .project .description:hover {
     background-color: rgba(0, 0, 0, 0.75);
     opacity: 1; }
 
 /********       ABOUT ME       ********/
+.about-me-row {
+  margin-top: 2rem; }
+  @media (min-width: 992px) {
+    .about-me-row {
+      margin-top: 0; } }
+
+.about-me {
+  padding-bottom: 2rem; }
+  .about-me .about-me-box {
+    padding: 0 2.5rem; }
+    @media (min-width: 768px) {
+      .about-me .about-me-box {
+        padding: 0 2.5rem;
+        margin-top: 1rem; } }
+    .about-me .about-me-box h3 {
+      margin: 0;
+      white-space: nowrap; }
+    .about-me .about-me-box p {
+      padding: 1rem 0; }
+    .about-me .about-me-box .ion-person, .about-me .about-me-box .ion-laptop {
+      color: #3498db;
+      padding-right: 0.5rem; }
+
 /********       SKILLS       ********/
+.skills #myCanvasContainer {
+  position: relative;
+  margin: 0 10% !important;
+  display: block;
+  clear: both;
+  width: 80%;
+  height: auto; }
+.skills #myCanvas {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: auto; }
+
 /********       CONTACT ME       ********/
 .contact-row {
   margin-top: 2rem; }

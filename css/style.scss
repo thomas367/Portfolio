@@ -396,7 +396,7 @@ button {
 
         }
 
-        .project:hover .description {
+        .description:hover {
             background-color: rgba(0, 0, 0, 0.75);
             opacity: 1;
         }
@@ -404,9 +404,39 @@ button {
 }
 
 /********       ABOUT ME       ********/
-.about-me {
+.about-me-row {
+    margin-top: 2rem;
 
-    
+    @include mq-desktop{
+        margin-top: 0;
+    }  
+}
+
+.about-me{
+    padding-bottom: 2rem;
+
+    .about-me-box{
+        padding: 0 2.5rem;
+
+        @include mq-tablet{
+            padding: 0 2.5rem;
+            margin-top: 1rem;
+        }
+
+        h3{
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        p{
+            padding: 1rem 0;
+        }
+
+        .ion-person, .ion-laptop{
+            color:$colorMain;
+            padding-right: 0.5rem;
+        }
+    }
 }
 
 /********       SKILLS       ********/
@@ -419,14 +449,13 @@ button {
         clear: both;
         width: 80%;
         height: auto;
-        @include absolute-center(50%, 50%);
     }
 
     #myCanvas{
         position: relative;
         width: 100%;
-        margin: 0;  
-        @include absolute-center(50%, 50%);  
+        margin: 0; 
+        height: auto;
     }
 }
 
