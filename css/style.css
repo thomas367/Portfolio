@@ -105,11 +105,6 @@ button {
   .button:focus {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75); }
 
-@media only screen and (max-width: 768px) {
-  .stop-scrolling {
-    height: 100%;
-    overflow: hidden; } }
-
 .dark-container {
   background-color: #191B1D;
   color: white; }

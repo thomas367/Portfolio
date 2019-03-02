@@ -32,4 +32,25 @@ $(document).ready(function () {
           $('#myCanvasContainer').hide();
         }
 
+    var isNavOpen = false;
+    var toggleBtnHandler = (function() {
+
+        var openNavBtn = $('.nav-open');
+        var closeNavBtn = $('.nav-close');
+  
+        return function() {
+            if (!isNavOpen) {
+                openNavBtn.animate({opacity: 0});
+                closeNavBtn.animate({opacity: 1});
+            }
+            else {
+                closeNavBtn.animate({opacity: 0});
+                openNavBtn.animate({opacity: 1}); 
+            }
+            isNavOpen = !isNavOpen;
+        };
+    })();
+
+    $('.nav-toggle-btn').click(toggleBtnHandler);
+
 });

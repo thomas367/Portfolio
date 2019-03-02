@@ -186,13 +186,6 @@ button {
     }
 }
 
-.stop-scrolling {
-    @media only screen and (max-width: $tablet-width) {
-        height: 100%;
-        overflow: hidden;
-    }
-}
-
 .dark-container {
     background-color: $colorDarkBlack;
     color: white;
