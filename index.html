@@ -1,164 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="HTML5, CSS3, JavaScript, web, development, websites, portfolio, responsive, front end">
 		<title>Thomas Liakos | Front End Developer</title>
-		
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		
-	</head>
-	<body data-spy="scroll" data-target="#main-nav">
-		<div class="container-fluid">
-			<div class="row">
-				<!-- Header -->
-				<header class="main-header" id="main-header">
-					<nav class="navbar">	
-						<div class="container">
-							<div class="navbar-header">
-								<button type="button" class="nav-toggle-btn collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-									<span class="ion-navicon nav-open"></span>
-									<span class="ion-android-close nav-close"></span>
-								</button>
-							</div>
-							
-							<div class="collapse navbar-collapse" id="main-nav">
-								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-									<li><a href="#about-me" class="nav-link">About me</a></li>
-									<li><a href="#skills" class="nav-link">Skills</a></li>
-									<li><a href="#contact" class="nav-link">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-			
-					<div class="welcome-box">
-						<p>Welcome to my digital home, I'm Thomas.</p>
-						<h1>Front end developer</h1>
-					</div>
-				</header> <!-- End of Header -->
-			</div>
-			
-			<!-- Portfolio -->
-			<div class="portfolio-row row">
-				<section class="container portfolio" id="portfolio">
-					<div class="row">
-						<h2>Portfolio</h2>
-					</div>
-					<div class="row">
-						<div class="projects clearfix" id="projects">
-							<section class="col-sm-6 project">
-								<img class="img-responsive project-img" src="img/AgroSurvey.jpg" alt="AgroSurvey">
-								<div class="description"> 
-	                                <h4>AgroSurvey</h4>
-	                                <p>AgroSurvey is a Web application, create your own surveys and collect responses.</p>
-	                                <a class="button github-btn" href="https://github.com/thomas367/AgroSurvey" target="_blank">Code</a>
-	                                <a class="button preview-btn" href="https://agnostos445.000webhostapp.com/index.php" target="_blank">Visit</a>
-	                            </div> 
-							</section>
-							<section class="col-sm-6 project">
-								<img class="img-responsive project-img" src="img/Foodipedia.jpg" alt="Foodipedia">
-								<div class="description"> 
-	                                <h4>Foodipedia</h4>
-	                                <p>A vue.js application where users publish and managing their recipes.</p>
-	                                <a class="button" href="https://github.com/thomas367/Foodipedia" target="_blank">Code</a>
-	                            </div> 
-							</section>
-						</div>
-					</div>
-				</section>
-			</div> <!-- End of Portfolio -->
-			
-			<!-- About me -->
-			<div class="row about-me-row dark-container">
-				<section class="container about-me" id="about-me">
-					<div class="row">
-						<h2>About me</h2>
-					</div>
-					<div class="row">
-						<section class="col-sm-offset-1 col-sm-3 about-me-box">
-							<div class="row">
-								<h3><span class="ion-person"></span>Who I am</h3>
-								<p>Hello! I'm Thomas a developer who loves coding, being constantly learning and challenging myself. I am a fast learner, self-motivated and adaptable to changing circumstances and environments.</p>
-							</div>
-						</section>
-						<section class="col-sm-offset-3 col-sm-3 about-me-box">
-							<div class="row">
-								<h3><span class="ion-laptop"></span>What I do</h3>
-								<p>I offer frontend solutions, making using of cutting edge technologies. I like mobile-first responsive design, progressive enhancement and single page applications. I find the process of shaping an online identity through engaging user interaction fascinating.</p>
-							</div>
-						</section>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="HTML5, CSS3, JavaScript, web development, websites, portfolio, responsive, front-end, react, mobx, webpack, vuejs" />
+		<meta name="description" content="Hello! I'm Thomas a developer who loves coding, being constantly learning and challenging myself. I am a fast learner, self-motivated and adaptable to changing circumstances and environments. I offer frontend solutions, making using of cutting edge technologies. I like mobile-first responsive design, progressive enhancement and single page applications. I find the process of shaping an online identity through engaging user interaction fascinating." />
 				
-					</div>
-				</section>
-			</div> <!-- End of About me -->
-			
-			<!-- Skills -->
-			<div class="skills-row row">
-				<section class="container skills" id="skills">
-					<div class="row">
-						<h2>Skills</h2>
-					</div>
-					<div class="col-sm-offset-3" id="myCanvasContainer">
-						<canvas width="450" height="450" id="myCanvas">
-							<ul id="mySkills">
-								<li><a href="#">HTML 5</a></li>
-								<li><a href="#">CSS 3</a></li>
-								<li><a href="#">JavaScript</a></li>
-								<li><a href="#">jQuery</a></li>
-								<li><a href="#">SASS</a></li>
-								<li><a href="#">Bootstrap</a></li>
-								<li><a href="#">PHP</a></li>
-								<li><a href="#">MySQL</a></li>
-								<li><a href="#">SQL</a></li>
-								<li><a href="#">Git</a></li>
-								<li><a href="#">AJAX</a></li>
-								<li><a href="#">JSON</a></li>
-							</ul>						
-						</canvas>
-					</div>	
-				</section>
-			</div> <!-- End of Skills -->
-			
-			<!-- Contact -->
-			<div class="row contact-row dark-container">
-				<section class="container contact" id="contact">
-					<div class="row">
-						<h2>Contact</h2>
-					</div>
-					<div class="row">
-						<p>You can know more about my projects or contact with me through the links below.</p>
-					</div>
-					<div class="social">
-						<ul class="nav">
-						
-							<!-- TODO: Add links -->
-							<li><a class="social-btn social-linkedin" href="" target="_blank"><span class="ion-social-linkedin"></span></a></li>
-							<li><a class="social-btn social-github" href="" target="_blank"><span class="ion-social-github"></span></a></li>
-							<li><a class="social-btn social-email" href=""><span class="ion-ios-email"></span></a></li>
-						</ul>
-					</div>
-				</section>
-			</div>	<!-- End of Contact -->	
-			
-			<!-- Footer -->
-			<div class="row dark-container">
-				<footer class="footer-main">
-					<p>Designed by Thomas Liakos &mdash; 2019 &copy;</p>
-				</footer>
-			</div> <!-- End of Footer -->
-		</div> <!-- End of container -->
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.0.2/typeit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/jquery-tagcanvas@2.9.0/jquery.tagcanvas.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script> 
+		<!-- TODO: update to new api fonts when is available. -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> -->
+
+		<link rel="icon" type="image/png" href="./images/favicon.png" sizes="512x512" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	</head>
+	<body>
+		<footer>
+			<p>Designed by Thomas Liakos &mdash; 2022 &copy;</p>
+		</footer>
 	</body>
 </html>
