@@ -5,4 +5,62 @@ html, body {
     font-weight: 400;
     font-size: 14px;
     box-sizing: border-box;
+    overflow: hidden;
+    background-color: #222;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.avatar {
+    display: flex;
+}
+
+.detailsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.details {
+    display: flex;
+    color: #d5d5d5;
+    margin-bottom: 10px;
+}
+
+.socialLinks {
+    display: flex;
+}
+
+.footerWrapper {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5d5d5;
+    width: 100%;
+    background-color: #252525;
+    border-top: 2px solid #333;
 }
