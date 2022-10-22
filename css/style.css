@@ -11,7 +11,6 @@ html, body {
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -29,7 +28,7 @@ body {
 
 .background {
     position: fixed;
-    background-image: url(../images/backgroundImg.jpeg);
+    background-image: url('../images/backgroundImg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,6 +51,16 @@ body {
     margin: 0 10px;
     max-width: 1056px;
     z-index: 1;
+    /* border: 1px solid #000; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%); */
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        max-width: 100vw;
+    }
 }
 
 .avatar {
@@ -67,6 +76,20 @@ body {
     display: flex;
     color: #d5d5d5;
     margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .details {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .details {
+        font-size: 11px;
+    }
 }
 
 .socialLinks {
@@ -81,7 +104,7 @@ body {
     position: relative;
     padding: 11px 29px;
     margin-bottom: 10px;
-    margin-right: 3px;
+    margin-right: 10px;
     font-size: 14px;
     line-height: 1.2;
     outline: 0;
@@ -91,7 +114,25 @@ body {
     text-shadow: none;
     border-radius: 30px;
     text-decoration: none;
-    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .link {
+        margin-right: 3px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .link {
+        font-size: 11px;
+    }
+}
+
+.link:hover {
+    background-color: #d5d5d5;
+    color: #7066ff
 }
 
 .link:last-child {
