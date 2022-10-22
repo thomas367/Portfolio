@@ -23,15 +23,35 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    background-image: url(../images/backgroundImg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
 }
 
 .profile {
     display: flex;
     flex-direction: row;
+    flex: 1 1 100%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 10px;
+    max-width: 1056px;
+    z-index: 1;
 }
 
 .avatar {
@@ -51,6 +71,31 @@ body {
 
 .socialLinks {
     display: flex;
+    margin-top: 27px;
+    justify-content: center;
+}
+
+.link {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 11px 29px;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.2;
+    outline: 0;
+    border: 2px solid #7066ff;
+    color: #d5d5d5;
+    background-color: #333;
+    text-shadow: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.link:last-child {
+    margin-right: 0;
 }
 
 .footerWrapper {
