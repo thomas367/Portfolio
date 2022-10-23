@@ -49,27 +49,75 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 10px;
-    max-width: 1056px;
+    max-width: 1000px;
     z-index: 1;
-    /* border: 1px solid #000; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%); */
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 8px 0 15px 0px rgba(0, 0, 0, 0.50), -8px 0 15px 0px rgba(0, 0, 0, 0.50);
+    background-color: rgba(51, 51, 51, 0.2);
 }
 
 @media screen and (max-width: 768px) {
     .profile {
         flex-direction: column;
         max-width: 100vw;
+        padding: 0;
     }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .profile {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+.avatarWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 25%;
 }
 
 .avatar {
     display: flex;
+    background-image: url('../images/avatar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 180px;
+    height: 180px;
+    background-color: #333;
+    border: 5px solid #333;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .detailsWrapper {
     display: flex;
     flex-direction: column;
+    flex: 1 1 75%;
+}
+
+.title {
+    color: #d5d5d5;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1;
+    font-size: 14;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 12px;
+    }
 }
 
 .details {
@@ -92,10 +140,22 @@ body {
     }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+    .details {
+        margin-bottom: 5px;
+    }
+}
+
 .socialLinks {
     display: flex;
     margin-top: 27px;
     justify-content: center;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .socialLinks {
+        margin-top: 17px;
+    }
 }
 
 .link {
@@ -121,18 +181,20 @@ body {
     .link {
         margin-right: 3px;
         font-size: 12px;
+        padding: 11px 27px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .link {
         font-size: 11px;
+        padding: 9px 20px;
     }
 }
 
 .link:hover {
     background-color: #d5d5d5;
-    color: #7066ff
+    color: #333
 }
 
 .link:last-child {
