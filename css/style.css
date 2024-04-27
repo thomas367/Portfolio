@@ -58,7 +58,8 @@ body {
     border-radius: 10px;
     padding: 5px;
     backdrop-filter: blur(10px);
-    background-color: rgba(202, 255, 255, 0.1); 
+    background-color: rgba(202, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 20px 0px rgba(202, 255, 255, 0.5);
 }
 
 .avatarWrapper {
