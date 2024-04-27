@@ -6,7 +6,7 @@ html, body {
     font-size: 14px;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #222;
+    background-color: #030A27;
 }
 
 body {
@@ -55,25 +55,10 @@ body {
     margin: 0 10px;
     max-width: 100vw;
     z-index: 1;
-    border: 1px solid #000;
     border-radius: 10px;
-    padding: 0;
-    box-shadow: 8px 0 15px 0px rgba(0, 0, 0, 0.50), -8px 0 15px 0px rgba(0, 0, 0, 0.50);
-    background-color: rgba(51, 51, 51, 0.2);
-}
-
-@media (max-width: 768px) and (orientation: landscape) {
-    .profile {
-        flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .profile {
-        flex-direction: row;
-        max-width: 1000px;
-        padding: 20px;
-    }
+    padding: 5px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(202, 255, 255, 0.1); 
 }
 
 .avatarWrapper {
@@ -91,16 +76,8 @@ body {
     background-position: center;
     width: 180px;
     height: 180px;
-    background-color: #333;
-    border: 5px solid #333;
+    border: 5px solid #030A27;
     border-radius: 50%;
-}
-
-@media (max-width: 768px) and (orientation: landscape) {
-    .avatar {
-        width: 150px;
-        height: 150px;
-    }
 }
 
 .detailsWrapper {
@@ -114,13 +91,7 @@ body {
     font-weight: 300;
     text-align: center;
     line-height: 1;
-    font-size: 12;
-}
-
-@media screen and (min-width: 769px) {
-    .title {
-        font-size: 14px;
-    }
+    font-size: 12px;
 }
 
 .details {
@@ -128,12 +99,6 @@ body {
     color: #d5d5d5;
     font-size: 12px;
     text-align: center;
-}
-
-@media screen and (min-width: 769px) {
-    .details {
-        font-size: 14px;
-    }
 }
 
 .socialLinks {
@@ -152,33 +117,19 @@ body {
     font-size: 12px;
     line-height: 1.2;
     outline: 0;
-    border: 2px solid #7066ff;
+    border: 2px solid #030A27;
     color: #d5d5d5;
-    background-color: #333;
+    background-color: rgba(55, 62, 91, 0.5);
     text-shadow: none;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
 }
 
-@media screen and (min-width: 769px) {
-    .link {
-        margin-right: 10px;
-        font-size: 14px;
-        padding: 11px 29px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .link {
-        padding: 9px 20px;
-    }
-}
-
-.link:hover {
+/* .link:hover {
     background-color: #d5d5d5;
     color: #333
-}
+} */
 
 .link:last-child {
     margin-right: 0;
@@ -192,6 +143,54 @@ body {
     align-items: center;
     color: #d5d5d5;
     width: 100%;
-    background-color: #252525;
-    border-top: 2px solid #333;
+    background-color: rgba(3, 10, 39, 0.85);
+}
+
+
+/* Media Queries */
+@media only screen and (orientation: landscape) {
+    .profile {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .profile {
+        flex-direction: row;
+        max-width: 1000px;
+        padding: 20px;
+    }
+
+    .title, .details {
+        font-size: 14px;
+    }
+
+    .link {
+        margin-right: 10px;
+        font-size: 14px;
+        padding: 11px 29px;
+    }
+}
+
+@media only screen and (max-height: 410px) and (orientation: landscape) {
+    .profile {
+        padding: 5px;
+    }
+
+    .title, .details {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .link {
+        padding: 9px 20px;
+    }
 }
